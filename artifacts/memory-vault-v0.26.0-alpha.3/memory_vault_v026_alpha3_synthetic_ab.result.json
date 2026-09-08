@@ -1,0 +1,282 @@
+{
+  "compared_against": "v0.26.0-alpha.1 negative case from TimeToBuildBob/TimeToBuildBob#8",
+  "review_zip_sha256": "fccc8d4d5aead869e42de3ec744fcdafcf224fd19a63e7e378eed3c98960251c",
+  "runtime": {
+    "platform": "linux",
+    "python": "3.12.3"
+  },
+  "source_commit": "d657d8381326693673426e66373d47e80f73be40",
+  "step1": {
+    "a_saved_kinds": [
+      "decision",
+      "fact",
+      "observation",
+      "goal"
+    ],
+    "b_admission": [
+      "verified"
+    ],
+    "b_has_all_selected_ids": true,
+    "b_memory_count_before_restart": 5,
+    "b_received_messages": 1,
+    "endpoint_validated": false,
+    "execution_eligible": null,
+    "restart_recall_hit_count": 3,
+    "restart_recall_includes_decision": false,
+    "restart_recall_includes_failure": true,
+    "restart_recall_kinds": [
+      "fact",
+      "goal",
+      "observation"
+    ],
+    "send_state": "stored",
+    "stored_nodes": 1
+  },
+  "step2": {
+    "b_memory_count_after_duplicate": 5,
+    "changed_failure_status_on_b": "superseded",
+    "changed_observation_status_on_b": "current",
+    "duplicate_receive_message_count": 0,
+    "duplicate_send_state": "stored",
+    "duplicate_send_stored_nodes": 1,
+    "no_duplicate_canonical_memories": true,
+    "original_failure_text_preserved": true
+  },
+  "step3": {
+    "agent_handoff_current_before_superseded": true,
+    "agent_handoff_first_is_cancellation": true,
+    "agent_handoff_hits": [
+      {
+        "kind": "decision",
+        "memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+        "relations": [],
+        "score_milli": null,
+        "status": "current"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_3622d7eda131de463b440c27bbe1c54a9299e4c4",
+        "relations": [],
+        "score_milli": null,
+        "status": "current"
+      },
+      {
+        "kind": "fact",
+        "memory_id": "mem_fd8eb8a75771e1d66a59cd86a72f0c54818894bd",
+        "relations": [],
+        "score_milli": null,
+        "status": "current"
+      },
+      {
+        "kind": "goal",
+        "memory_id": "mem_17d962629da026dca95072b816df20236045b53b",
+        "relations": [],
+        "score_milli": null,
+        "status": "superseded"
+      }
+    ],
+    "agent_handoff_next_cursor_present": true,
+    "agent_handoff_page2_hits": [
+      {
+        "kind": "observation",
+        "memory_id": "mem_aaa51752fe0380f7670945e124b1149a39144abc",
+        "relations": [],
+        "score_milli": null,
+        "status": "superseded"
+      }
+    ],
+    "agent_ordinary_current_before_superseded": true,
+    "agent_ordinary_first_is_cancellation": true,
+    "agent_ordinary_hits": [
+      {
+        "kind": "decision",
+        "memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+        "relations": [],
+        "score_milli": null,
+        "status": "current"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_3622d7eda131de463b440c27bbe1c54a9299e4c4",
+        "relations": [],
+        "score_milli": null,
+        "status": "current"
+      },
+      {
+        "kind": "fact",
+        "memory_id": "mem_fd8eb8a75771e1d66a59cd86a72f0c54818894bd",
+        "relations": [],
+        "score_milli": null,
+        "status": "current"
+      },
+      {
+        "kind": "goal",
+        "memory_id": "mem_17d962629da026dca95072b816df20236045b53b",
+        "relations": [],
+        "score_milli": null,
+        "status": "superseded"
+      }
+    ],
+    "agent_ordinary_next_cursor_present": true,
+    "agent_ordinary_page2_hits": [
+      {
+        "kind": "observation",
+        "memory_id": "mem_aaa51752fe0380f7670945e124b1149a39144abc",
+        "relations": [],
+        "score_milli": null,
+        "status": "superseded"
+      }
+    ],
+    "cancellation_decision_status_on_b": "current",
+    "cancellation_memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+    "cancelled_goal_status_on_b": "superseded",
+    "handoff_surfaces_cancelled_goal": true,
+    "memory_does_not_authorize_execution": true,
+    "ordinary_recall_surfaces_cancelled_goal": true,
+    "original_goal_text_preserved": true,
+    "pagination_page2_does_not_repeat_page1_ids": true,
+    "pagination_page2_ids": [
+      "mem_aaa51752fe0380f7670945e124b1149a39144abc"
+    ],
+    "recall_limit": 4,
+    "recall_query": "retry the fixture probe",
+    "recipient_save_separate_from_relay": true,
+    "relay_plaintext_leaks": [],
+    "superseded_goal_memory_id": "mem_17d962629da026dca95072b816df20236045b53b",
+    "vault_handoff_current_before_superseded": true,
+    "vault_handoff_limit1_hits": [
+      {
+        "kind": "decision",
+        "memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+        "relations": [
+          {
+            "target": "mem_17d962629da026dca95072b816df20236045b53b",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 1118,
+        "status": "current"
+      }
+    ],
+    "vault_handoff_limit1_is_cancellation": true,
+    "vault_handoff_ranked_hits": [
+      {
+        "kind": "decision",
+        "memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+        "relations": [
+          {
+            "target": "mem_17d962629da026dca95072b816df20236045b53b",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 1118,
+        "status": "current"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_3622d7eda131de463b440c27bbe1c54a9299e4c4",
+        "relations": [
+          {
+            "target": "mem_aaa51752fe0380f7670945e124b1149a39144abc",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 532,
+        "status": "current"
+      },
+      {
+        "kind": "fact",
+        "memory_id": "mem_fd8eb8a75771e1d66a59cd86a72f0c54818894bd",
+        "relations": [
+          {
+            "target": "mem_3bdcd2ff62c5d294783a7358d2c6bd865fd16b7e",
+            "type": "related_to"
+          }
+        ],
+        "score_milli": 224,
+        "status": "current"
+      },
+      {
+        "kind": "goal",
+        "memory_id": "mem_17d962629da026dca95072b816df20236045b53b",
+        "relations": [
+          {
+            "target": "mem_aaa51752fe0380f7670945e124b1149a39144abc",
+            "type": "derived_from"
+          }
+        ],
+        "score_milli": 3194,
+        "status": "superseded"
+      }
+    ],
+    "vault_ordinary_current_before_superseded": true,
+    "vault_ordinary_limit1_hits": [
+      {
+        "kind": "decision",
+        "memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+        "relations": [
+          {
+            "target": "mem_17d962629da026dca95072b816df20236045b53b",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 1118,
+        "status": "current"
+      }
+    ],
+    "vault_ordinary_limit1_is_cancellation": true,
+    "vault_ordinary_ranked_hits": [
+      {
+        "kind": "decision",
+        "memory_id": "mem_139b2a766b04ef3ebab6a80d551f24746b213e35",
+        "relations": [
+          {
+            "target": "mem_17d962629da026dca95072b816df20236045b53b",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 1118,
+        "status": "current"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_3622d7eda131de463b440c27bbe1c54a9299e4c4",
+        "relations": [
+          {
+            "target": "mem_aaa51752fe0380f7670945e124b1149a39144abc",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 532,
+        "status": "current"
+      },
+      {
+        "kind": "fact",
+        "memory_id": "mem_fd8eb8a75771e1d66a59cd86a72f0c54818894bd",
+        "relations": [
+          {
+            "target": "mem_3bdcd2ff62c5d294783a7358d2c6bd865fd16b7e",
+            "type": "related_to"
+          }
+        ],
+        "score_milli": 224,
+        "status": "current"
+      },
+      {
+        "kind": "goal",
+        "memory_id": "mem_17d962629da026dca95072b816df20236045b53b",
+        "relations": [
+          {
+            "target": "mem_aaa51752fe0380f7670945e124b1149a39144abc",
+            "type": "derived_from"
+          }
+        ],
+        "score_milli": 3194,
+        "status": "superseded"
+      }
+    ]
+  },
+  "synthetic_only": true,
+  "topology": "1 authority + 1 relay + 2 endpoints (Starlette TestClient, loopback URLs)",
+  "version": "0.26.0-alpha.3"
+}
