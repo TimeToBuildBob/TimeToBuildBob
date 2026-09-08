@@ -1,0 +1,218 @@
+{
+  "runtime": {
+    "platform": "linux",
+    "python": "3.12.3"
+  },
+  "source_commit": "1b0eae0fdf8b2c045f99b92858c72da61cf9e753",
+  "step1": {
+    "a_saved_kinds": [
+      "decision",
+      "fact",
+      "observation",
+      "goal"
+    ],
+    "b_admission": [
+      "verified"
+    ],
+    "b_has_all_selected_ids": true,
+    "b_memory_count_before_restart": 5,
+    "b_received_messages": 1,
+    "endpoint_validated": false,
+    "execution_eligible": null,
+    "restart_recall_hit_count": 3,
+    "restart_recall_includes_decision": false,
+    "restart_recall_includes_failure": true,
+    "restart_recall_kinds": [
+      "fact",
+      "goal",
+      "observation"
+    ],
+    "send_state": "stored",
+    "stored_nodes": 1
+  },
+  "step2": {
+    "b_memory_count_after_duplicate": 5,
+    "changed_failure_status_on_b": "superseded",
+    "changed_observation_status_on_b": "current",
+    "duplicate_receive_message_count": 0,
+    "duplicate_send_state": "stored",
+    "duplicate_send_stored_nodes": 1,
+    "no_duplicate_canonical_memories": true,
+    "original_failure_text_preserved": true
+  },
+  "step3": {
+    "agent_handoff_hits": [
+      {
+        "kind": "goal",
+        "memory_id": "mem_9e8db9c0e4a3d447537eebc70e0212e4871ecbf3",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      },
+      {
+        "kind": "decision",
+        "memory_id": "mem_c5e49c7f732c32562c128c5a4411a28d059319c9",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_fb8c11350e990fbeffe9b915e761b6b95065b918",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      }
+    ],
+    "agent_ordinary_hits": [
+      {
+        "kind": "goal",
+        "memory_id": "mem_9e8db9c0e4a3d447537eebc70e0212e4871ecbf3",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      },
+      {
+        "kind": "decision",
+        "memory_id": "mem_c5e49c7f732c32562c128c5a4411a28d059319c9",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_fb8c11350e990fbeffe9b915e761b6b95065b918",
+        "relations": [],
+        "score_milli": null,
+        "status": null
+      }
+    ],
+    "cancellation_decision_status_on_b": "current",
+    "cancelled_goal_status_on_b": "superseded",
+    "handoff_surfaces_cancelled_goal": true,
+    "memory_does_not_authorize_execution": true,
+    "ordinary_recall_surfaces_cancelled_goal": true,
+    "original_goal_text_preserved": true,
+    "recall_limit": 4,
+    "recall_query": "retry the fixture probe",
+    "recipient_save_separate_from_relay": true,
+    "relay_plaintext_leaks": [],
+    "vault_handoff_ranked_hits": [
+      {
+        "kind": "goal",
+        "memory_id": "mem_9e8db9c0e4a3d447537eebc70e0212e4871ecbf3",
+        "relations": [
+          {
+            "target": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+            "type": "derived_from"
+          }
+        ],
+        "score_milli": 3194,
+        "status": "superseded"
+      },
+      {
+        "kind": "decision",
+        "memory_id": "mem_c5e49c7f732c32562c128c5a4411a28d059319c9",
+        "relations": [
+          {
+            "target": "mem_9e8db9c0e4a3d447537eebc70e0212e4871ecbf3",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 1118,
+        "status": "current"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+        "relations": [
+          {
+            "target": "mem_aec2f4e79b2c96a1808031440f0b0c77f61a840b",
+            "type": "derived_from"
+          }
+        ],
+        "score_milli": 925,
+        "status": "superseded"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_fb8c11350e990fbeffe9b915e761b6b95065b918",
+        "relations": [
+          {
+            "target": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 532,
+        "status": "current"
+      }
+    ],
+    "vault_ordinary_ranked_hits": [
+      {
+        "kind": "goal",
+        "memory_id": "mem_9e8db9c0e4a3d447537eebc70e0212e4871ecbf3",
+        "relations": [
+          {
+            "target": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+            "type": "derived_from"
+          }
+        ],
+        "score_milli": 3194,
+        "status": "superseded"
+      },
+      {
+        "kind": "decision",
+        "memory_id": "mem_c5e49c7f732c32562c128c5a4411a28d059319c9",
+        "relations": [
+          {
+            "target": "mem_9e8db9c0e4a3d447537eebc70e0212e4871ecbf3",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 1118,
+        "status": "current"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+        "relations": [
+          {
+            "target": "mem_aec2f4e79b2c96a1808031440f0b0c77f61a840b",
+            "type": "derived_from"
+          }
+        ],
+        "score_milli": 925,
+        "status": "superseded"
+      },
+      {
+        "kind": "observation",
+        "memory_id": "mem_fb8c11350e990fbeffe9b915e761b6b95065b918",
+        "relations": [
+          {
+            "target": "mem_ca2c63a43ba6ff44087260a1803ab369d6904062",
+            "type": "supersedes"
+          }
+        ],
+        "score_milli": 532,
+        "status": "current"
+      }
+    ]
+  },
+  "synthetic_only": true,
+  "topology": "1 authority + 1 relay + 2 endpoints (Starlette TestClient, loopback URLs)",
+  "version": "0.26.0-alpha.1"
+}
