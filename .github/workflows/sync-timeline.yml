@@ -42,11 +42,12 @@ jobs:
       - name: Commit if changed
         if: github.ref == 'refs/heads/master'
         run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           if git diff --quiet README.md; then
             echo "README already up to date"
             exit 0
           fi
-          git config user.name "github-actions[bot]"
-          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git commit README.md -m "docs(readme): sync timeline from website"
+          git add README.md
+          git commit -m "docs(readme): sync timeline from website"
           git push
