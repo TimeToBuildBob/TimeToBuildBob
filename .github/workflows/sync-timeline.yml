@@ -1,9 +1,10 @@
 name: Sync timeline
 
 # The month-by-month sections of README.md (between the timeline markers) are
-# generated from _data/timeline.yml in TimeToBuildBob/timetobuildbob.github.io,
-# which also renders https://timetobuildbob.github.io/timeline/.
-# Edit the data there, not here.
+# generated from _data/timeline.yml in TimeToBuildBob/TimeToBuildBob.github.io
+# (the source of truth, which also renders https://timetobuildbob.github.io/timeline/)
+# by that repo's scripts/render_profile_readme.py. Edit the data there, not here.
+# Process doc: ErikBjare/bob knowledge/processes/public-timeline-sync.md
 
 on:
   schedule:
@@ -39,6 +40,7 @@ jobs:
           python website/scripts/render_profile_readme.py README.md --data website/_data/timeline.yml
 
       - name: Commit if changed
+        if: github.ref == 'refs/heads/master'
         run: |
           if git diff --quiet README.md; then
             echo "README already up to date"
