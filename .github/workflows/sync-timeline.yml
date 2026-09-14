@@ -1,0 +1,50 @@
+name: Sync timeline
+
+# The month-by-month sections of README.md (between the timeline markers) are
+# generated from _data/timeline.yml in TimeToBuildBob/timetobuildbob.github.io,
+# which also renders https://timetobuildbob.github.io/timeline/.
+# Edit the data there, not here.
+
+on:
+  schedule:
+    - cron: "23 4 * * *"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch timeline data and renderer
+        uses: actions/checkout@v4
+        with:
+          repository: TimeToBuildBob/timetobuildbob.github.io
+          path: website
+          sparse-checkout: |
+            _data/timeline.yml
+            scripts/render_profile_readme.py
+          sparse-checkout-cone-mode: false
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Render README
+        run: |
+          pip install pyyaml
+          python website/scripts/render_profile_readme.py README.md --data website/_data/timeline.yml
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet README.md; then
+            echo "README already up to date"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git commit README.md -m "docs(readme): sync timeline from website"
+          git push
