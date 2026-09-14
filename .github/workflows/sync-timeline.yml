@@ -19,6 +19,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+        with:
+          ref: master
 
       - name: Fetch timeline data and renderer
         uses: actions/checkout@v4
@@ -50,4 +52,4 @@ jobs:
           fi
           git add README.md
           git commit -m "docs(readme): sync timeline from website"
-          git push
+          git push origin HEAD:master
